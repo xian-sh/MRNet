@@ -1,6 +1,6 @@
 # Maskable Retentive Network for Video Moment Retrieval
 
-**Task Example:** Video grounding task (query: text or audio). The video is described by four queries (events), all of which have separate semantic context and temporal dependency. Other queries can provide global context (antecedents and consequences) for the current query (e.g. query Q4). Besides, historical similar scenarios (such as in blue dashed box) help to discover relevant event clues (time and semantic clues) for understanding the current scenario (blue solid box).
+**Task Example:** The goal of both MR tasks NLMR (natural language moment retrieval) and SLMR (spoken language moment retrieval) is to predict the temporal boundaries (𝜏𝑠𝑡𝑎𝑟𝑡 , 𝜏𝑒𝑛𝑑 ) of target moment described by a given query 𝑞 (text or audio modality).
 
 <p align="center">
  <img src="./assets/task_new1.png" width="50%">
