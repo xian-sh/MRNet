@@ -25,7 +25,6 @@ The architecture of the Maskable Retentive Network (MRNet). We conduct modality-
 - [x] : Upload instruction for dataset download
 - [x] : Upload implementation
 - [x] : Update training and testing instructions
-- [x] : Provide access to pre-extracted features of all data
 - [x] : Update trained model
 
 
