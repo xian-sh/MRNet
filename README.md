@@ -6,6 +6,12 @@
  <img src="./assets/task_new1.png" width="70%">
 </p>
 
+```
+ Two important characteristics:
+ 1) Temporal association between video clips: The temporal correlation between two video clips that are farther apart is weaker;
+ 2) Redundant background interference: The background contains a lot of redundant information that can interfere with the recognition of the current event, and this redundancy is even worse in long videos.
+```
+----------
 ## Approach
 
 The architecture of the Maskable Retentive Network (MRNet). We conduct modality-specific attention modes, that is, we set _Unlimited Attention_ for language-related attention regions to maximize cross-modal mutual guidance, and perform a new _Maskable Retention_ for video branch $\mathcal{A}(v\to v)$ for enhanced video sequence modeling. 
