@@ -53,7 +53,7 @@ The architecture of the Maskable Retentive Network (MRNet). We conduct modality-
 
 **3. Prepare the files in the following structure.**
    
-      UniSDNet
+      MRNet
       ├── configs
       ├── dataset
       ├── ret
