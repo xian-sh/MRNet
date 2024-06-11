@@ -26,7 +26,7 @@ The architecture of the Maskable Retentive Network (MRNet). We conduct modality-
 - [x] : Upload implementation
 - [x] : Update training and testing instructions
 - [x] : Provide access to pre-extracted features of all data
-- [ ] : Update trained model
+- [x] : Update trained model
 
 
 ----------
@@ -57,21 +57,13 @@ The architecture of the Maskable Retentive Network (MRNet). We conduct modality-
 
 * The Audio Captions: ActivityNet Speech Dataset: download the [original audio](https://drive.google.com/file/d/11f6sC94Swov_opNfpleTlVGyLJDFS5IW/view?usp=sharing) proposed by [VGCL](https://github.com/marmot-xy/Spoken-Video-Grounding)
 
-* The Audio Captions: Charades-STA Speech Dataset: download the [original audio](https://zenodo.org/record/8019213) proposed by us.
-
-* The Audio Captions: TACoS Speech Dataset: download the [original audio](https://zenodo.org/record/8022063) proposed by us. 
-
-**2. Pre-extracted dataset features.**
-
-        https://pan.baidu.com/xxxx
-        password:xxxx
  
-**3. Prepare the files in the following structure.**
+**2. Prepare the files in the following structure.**
    
       UniSDNet
       ├── configs
       ├── dataset
-      ├── dtfnet
+      ├── ret
       ├── data
       │   ├── activitynet
       │   │   ├── *text features
@@ -79,21 +71,17 @@ The architecture of the Maskable Retentive Network (MRNet). We conduct modality-
       │   │   └── *video c3d features
       │   ├── charades
       │   │   ├── *text features
-      │   │   ├── *audio features
-      │   │   ├── *video vgg features
-      │   │   ├── *video c3d features
       │   │   └── *video i3d features
       │   └── tacos
       │       ├── *text features
-      │       ├── *audio features
       │       └── *video c3d features
       ├── train_net.py
       ├── test_net.py
       └── ···
 
-**4. Or set your own dataset path in the following .py file.**
+**3. Or set your own dataset path in the following .py file.**
 
-      dtfnet/config/paths_catalog.py
+      ret/config/paths_catalog.py
 
 ## Dependencies
 
@@ -111,78 +99,14 @@ For training, run the python instruction below:
 python train_net.py --config-file configs/xxxx.yaml 
 ```
 
-
 ## Testing
-Our trained model are provided in [baiduyun, passcode:d4yl](https://pan.baidu.com/s/1FLzAPACOfcK_xDewZoXAkg?pwd=d4yl) or [Google Drive](xx). Please download them to the `checkpoints/best/` folder.
+Our trained model are provided in [Google Drive](xx). Please download them to the `checkpoints/best/` folder.
 Use the following commands for testing:
 
 ```
 python test_net.py --config-file checkpoints/best/xxxx.yaml   --ckpt   checkpoints/best/xxxx.pth
 ```
 
-## Main NLVG Results:
-
-| **ActivityNet Captions** | Rank1@0.5 | Rank1@0.7 | Rank5@0.5 | Rank5@0.7 | mIoU|
-| ---- |:-------------:| :-----:|:-----:|:-----:|:-----:|
-| **UniSDNet** | 60.75 | 38.88 | 85.34 | 74.01 | 55.47|
-</br>
-
-| **TACoS** | Rank1@0.3 | Rank1@0.5 | Rank5@0.3 | Rank5@0.5 | mIoU|
-| ---- |:-------------:| :-----:|:-----:|:-----:|:-----:|
-| **UniSDNet** |  55.56 | 40.26 |  77.08 | 64.01 | 38.88|
-</br>
-
-| **Charades-STA (VGG)**  | Rank1@0.5 | Rank1@0.7 | Rank5@0.5 | Rank5@0.7 | mIoU|
-| ---- |:-------------:| :-----:|:-----:|:-----:|:-----:|
-| **UniSDNet** | 48.41 | 28.33 | 84.76 | 59.46 | 44.41|
-</br>
-
-| **Charades-STA (C3D)**  | Rank1@0.5 | Rank1@0.7 | Rank5@0.5 | Rank5@0.7 | mIoU|
-| ---- |:-------------:| :-----:|:-----:|:-----:|:-----:|
-| **UniSDNet** | 49.57 | 28.39 | 84.70 | 58.49 | 44.29|
-</br>
-
-| **Charades-STA (I3D)**  | Rank1@0.5 | Rank1@0.7 | Rank5@0.5 | Rank5@0.7 | mIoU|
-| ---- |:-------------:| :-----:|:-----:|:-----:|:-----:|
-| **UniSDNet** | 61.02 | 39.70 | 89.97 | 73.20 | 52.69|
-
-
-## Main SLVG Results:
-
-
-| **ActivityNet Speech** | Rank1@0.3 | Rank1@0.5 | Rank1@0.7 | Rank5@0.3 |Rank5@0.5 | Rank5@0.7 | mIoU|
-| ---- |:-------------:| :-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
-| **UniSDNet** | 72.27 | 56.29 | 33.29 | 90.41 | 84.28| 72.42 | 52.22|
-</br>
-
-| **TACoS Speech** | Rank1@0.3 | Rank1@0.5 | Rank1@0.7 | Rank5@0.3 |Rank5@0.5 | Rank5@0.7 | mIoU|
-| ---- |:-------------:| :-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
-| **UniSDNet** | 51.66 | 37.77 |  20.44 | 76.38 | 63.48 | 33.64 | 36.86 |
-</br>
-
-| **Charades-STA Speech(VGG)**  | Rank1@0.3 | Rank1@0.5 | Rank1@0.7 | Rank5@0.3 |Rank5@0.5 | Rank5@0.7 | mIoU|
-| ---- |:-------------:| :-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
-| **UniSDNet** | 60.73 | 46.37 | 26.72 | 92.66 | 82.31 | 57.66 | 42.28 |
-</br>
-
-| **Charades-STA (I3D)**  | Rank1@0.3 | Rank1@0.5 | Rank1@0.7 | Rank5@0.3 |Rank5@0.5 | Rank5@0.7 | mIoU|
-| ---- |:-------------:| :-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
-| **UniSDNet** | 67.45 | 53.82 | 34.49 | 94.81 | 87.90 | 69.30 | 48.27 |
-
-## BibTeX 
-If you find the repository or the paper useful, please use the following entry for citation.
-```
-@article{hu2024unified,
-  title={Unified Static and Dynamic Network: Efficient Temporal Filtering for Video Grounding},
-  author={Jingjing Hu and Dan Guo and Kun Li and Zhan Si and Xun Yang and Xiaojun Chang and Meng Wang},
-  year={2024},
-  Journal={CoRR},
-  volume={abs/2403.14174},
-}
-```
-
-## Contact
-If there are any questions, feel free to contact the author: Jingjing Hu (xianhjj623@gmail.com)
 
 ## LICENSE
 The annotation files and many parts of the implementations are borrowed from [MMN](https://github.com/MCG-NJU/MMN).
