@@ -3,12 +3,12 @@
 **Task Example:** The goal of both MR tasks NLMR (natural language moment retrieval) and SLMR (spoken language moment retrieval) is to predict the temporal boundaries (𝜏𝑠𝑡𝑎𝑟𝑡 , 𝜏𝑒𝑛𝑑 ) of target moment described by a given query 𝑞 (text or audio modality).
 
 <p align="center">
- <img src="./assets/task_new1.png" width="50%">
+ <img src="./assets/task_new1.png" width="70%">
 </p>
 
 ## Approach
 
-The architecture of the UniSDNet. It mainly consists of static and dynamic networks: Static Semantic Supplement Network (S3Net) and Dynamic Temporal Filtering Network (DTFNet). S3Net concatenates video clips and multiple queries into a sequence and encodes them through a lightweight single-stream ResMLP network. DTFNet is a 2-layer graph network with a dynamic Gaussian filtering convolution mechanism, which is designed to control message passing between nodes by considering temporal distance and semantic relevance as the Gaussian filtering clues when updating node features. The role of 2D temporal map is to retain possible candidate proposals and represent them by aggregating the features of each proposal moment. Finally, we perform semantic matching between the queries and proposals and rank the best ones as the predictions.
+The architecture of the Maskable Retentive Network (MRNet). We conduct modality-specific attention modes, that is, we set $\textbf{Unlimited Attention}$ for language-related attention regions to maximize cross-modal mutual guidance, and perform a new $\textbf{Maskable Retention}$ for video branch $\mathcal{A}(v\to v)$ for enhanced video sequence modeling. 
 
 <div align="center">
   <img src="./assets/main_model.png" alt="Approach" width="800" height="210">
