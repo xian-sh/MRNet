@@ -3,7 +3,7 @@
 **Task Example:** Video grounding task (query: text or audio). The video is described by four queries (events), all of which have separate semantic context and temporal dependency. Other queries can provide global context (antecedents and consequences) for the current query (e.g. query Q4). Besides, historical similar scenarios (such as in blue dashed box) help to discover relevant event clues (time and semantic clues) for understanding the current scenario (blue solid box).
 
 <p align="center">
- <img src="./assets/intro.png" width="80%">
+ <img src="./assets/task_new1.pdf" width="50%">
 </p>
 
 ## Approach
