@@ -3,7 +3,7 @@
 **Task Example:** Video grounding task (query: text or audio). The video is described by four queries (events), all of which have separate semantic context and temporal dependency. Other queries can provide global context (antecedents and consequences) for the current query (e.g. query Q4). Besides, historical similar scenarios (such as in blue dashed box) help to discover relevant event clues (time and semantic clues) for understanding the current scenario (blue solid box).
 
 <p align="center">
- <img src="./assets/task_new1.pdf" width="50%">
+ <img src="./assets/task_new1.png" width="50%">
 </p>
 
 ## Approach
@@ -11,7 +11,7 @@
 The architecture of the UniSDNet. It mainly consists of static and dynamic networks: Static Semantic Supplement Network (S3Net) and Dynamic Temporal Filtering Network (DTFNet). S3Net concatenates video clips and multiple queries into a sequence and encodes them through a lightweight single-stream ResMLP network. DTFNet is a 2-layer graph network with a dynamic Gaussian filtering convolution mechanism, which is designed to control message passing between nodes by considering temporal distance and semantic relevance as the Gaussian filtering clues when updating node features. The role of 2D temporal map is to retain possible candidate proposals and represent them by aggregating the features of each proposal moment. Finally, we perform semantic matching between the queries and proposals and rank the best ones as the predictions.
 
 <div align="center">
-  <img src="./assets/main_structure.png" alt="Approach" width="800" height="210">
+  <img src="./assets/main_model.png" alt="Approach" width="800" height="210">
 </div>
 
 ----------
