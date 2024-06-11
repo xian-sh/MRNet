@@ -1,6 +1,6 @@
 # Maskable Retentive Network for Video Moment Retrieval
 
-**Task Example:** The goal of both MR tasks NLMR ($\emph{natural language moment retrieval}$) and SLMR ($\emph{spoken language moment retrieval}$) is to predict the temporal boundaries $(\tau_{start}, \tau_{end})$ of target moment described by a given query $q$ (\emph{text or audio modality}).
+**Task Example:** The goal of both MR tasks NLMR (_natural language moment retrieval_) and SLMR (_spoken language moment retrieval_) is to predict the temporal boundaries $(\tau_{start}, \tau_{end})$ of target moment described by a given query $q$ (\emph{text or audio modality}).
 
 <p align="center">
  <img src="./assets/task_new1.png" width="70%">
@@ -8,7 +8,7 @@
 
 ## Approach
 
-The architecture of the Maskable Retentive Network (MRNet). We conduct modality-specific attention modes, that is, we set $\textbf{Unlimited Attention}$ for language-related attention regions to maximize cross-modal mutual guidance, and perform a new $\textbf{Maskable Retention}$ for video branch $\mathcal{A}(v\to v)$ for enhanced video sequence modeling. 
+The architecture of the Maskable Retentive Network (MRNet). We conduct modality-specific attention modes, that is, we set _Unlimited Attention_ for language-related attention regions to maximize cross-modal mutual guidance, and perform a new _Maskable Retention_ for video branch $\mathcal{A}(v\to v)$ for enhanced video sequence modeling. 
 
 <div align="center">
   <img src="./assets/main_model.png" alt="Approach" width="800" height="210">
