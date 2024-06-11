@@ -20,13 +20,6 @@ The architecture of the Maskable Retentive Network (MRNet). We conduct modality-
   <img src="./assets/main_model.png" alt="Approach" width="800" height="210">
 </div>
 
-----------
-## To be updated
-- [x] : Upload instruction for dataset download
-- [x] : Upload implementation
-- [x] : Update training and testing instructions
-- [x] : Update trained model
-
 
 ----------
 
