@@ -32,12 +32,11 @@ The architecture of the Maskable Retentive Network (MRNet). We conduct modality-
 
 ## Download and prepare the datasets
 
-**1. Download the original datasets (optional).** 
+**1. Download the datasets.** 
    
 * The [video feature](https://rochester.app.box.com/s/8znalh6y5e82oml2lr7to8s6ntab6mav)  provided by [2D-TAN](https://github.com/microsoft/2D-TAN)
     
         ActivityNet Captions C3D feature
-        Charades-STA VGG feature
         TACoS C3D feature
 
     
