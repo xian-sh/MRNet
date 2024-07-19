@@ -96,7 +96,7 @@ python train_net.py --config-file configs/xxxx.yaml
 ```
 
 ## Testing
-Our trained model are provided in [Google Drive](xx). Please download them to the `checkpoints/best/` folder.
+Our trained model will be provided in [Google Drive](xx). Please download them to the `checkpoints/best/` folder.
 Use the following commands for testing:
 
 ```
