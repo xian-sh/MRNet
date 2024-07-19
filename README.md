@@ -1,5 +1,7 @@
 # Maskable Retentive Network for Video Moment Retrieval
 
+Source code for our ACM MM 2024 paper x
+
 **Task Example:** The goal of both MR tasks NLMR (_natural language moment retrieval_) and SLMR (_spoken language moment retrieval_) is to predict the temporal boundaries $(\tau_{start}, \tau_{end})$ of target moment described by a given query $q$ (_text or audio modality_).
 
 <p align="center">
