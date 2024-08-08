@@ -102,8 +102,7 @@ python train_net.py --config-file configs/xxxx.yaml
 ### ActivityNet
 
  1) download the model weight file from [Google Drive](https://drive.google.com/drive/folders/1wSnpo4CptQUV2BALX5TNPRqa505OY70k?usp=sharing) to the `checkpoints/best/activity` folder
- 2) `cd ret/modeling/ret_model`, then copy the code in file `ret_model_activity.py` to file `ret_model.py`.
- 3) `python test_net.py --config-file checkpoints/best/activity/config.yaml   --ckpt   checkpoints/best/activity/pool_model_14.pth`
+ 2) `python test_net.py --config-file checkpoints/best/activity/config.yaml   --ckpt   checkpoints/best/activity/pool_model_14.pth`
 
 ### TACoS
 
