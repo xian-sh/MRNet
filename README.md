@@ -91,11 +91,19 @@ The architecture of the Maskable Retentive Network (MRNet). We conduct modality-
 
 ## Training
 
-For training, run the python instruction below:
+### ActivityNet
 
-```
-python train_net.py --config-file checkpoints/best/xxxxxxx/config.yml 
-```
+ 1) `python train_net.py --config-file --config-file checkpoints/best/activity/config.yml`
+
+### TACoS
+
+ 1) `cd ret/modeling/ret_model`, then copy the code in file `ret_model_tacos.py` to file `ret_model.py`.
+ 2) `python train_net.py --config-file checkpoints/best/tacos/config.yml`
+
+### Charades
+
+ 1) `cd ret/modeling/ret_model`, then copy the code in file `ret_model_charades.py` to file `ret_model.py`.
+ 3) `python train_net.py --config-file checkpoints/best/charades/config.yml`
 
 ## Testing 
 
