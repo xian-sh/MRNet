@@ -94,7 +94,7 @@ The architecture of the Maskable Retentive Network (MRNet). We conduct modality-
 For training, run the python instruction below:
 
 ```
-python train_net.py --config-file configs/xxxx.yaml 
+python train_net.py --config-file checkpoints/best/xxxxxxx/config.yml 
 ```
 
 ## Testing 
@@ -102,19 +102,19 @@ python train_net.py --config-file configs/xxxx.yaml
 ### ActivityNet
 
  1) download the model weight file from [Google Drive](https://drive.google.com/drive/folders/1wSnpo4CptQUV2BALX5TNPRqa505OY70k?usp=sharing) to the `checkpoints/best/activity` folder
- 2) `python test_net.py --config-file checkpoints/best/activity/config.yaml   --ckpt   checkpoints/best/activity/pool_model_14.pth`
+ 2) `python test_net.py --config-file checkpoints/best/activity/config.yml   --ckpt   checkpoints/best/activity/pool_model_14.pth`
 
 ### TACoS
 
  1) download the model weight file from [Google Drive](https://drive.google.com/drive/folders/1yAkpu-hSL1nW9uPzKb4cH4dqMY985A4E?usp=sharing) to the `checkpoints/best/tacos` folder
  2) `cd ret/modeling/ret_model`, then copy the code in file `ret_model_tacos.py` to file `ret_model.py`.
- 3) `python test_net.py --config-file checkpoints/best/tacos/config.yaml   --ckpt   checkpoints/best/tacos/pool_model_110e.pth`
+ 3) `python test_net.py --config-file checkpoints/best/tacos/config.yml   --ckpt   checkpoints/best/tacos/pool_model_110e.pth`
 
 ### Charades
 
  1) download the model weight file from [Google Drive](https://drive.google.com/drive/folders/1jUPXbhGTE5N9--W4iTi709956DrTkEPA?usp=sharing) to the `checkpoints/best/charades` folder
  2) `cd ret/modeling/ret_model`, then copy the code in file `ret_model_charades.py` to file `ret_model.py`.
- 3) `python test_net.py --config-file checkpoints/best/charades/config.yaml   --ckpt   checkpoints/best/charades/pool_model_11e.pth`
+ 3) `python test_net.py --config-file checkpoints/best/charades/config.yml   --ckpt   checkpoints/best/charades/pool_model_11e.pth`
 
 
 ## LICENSE
