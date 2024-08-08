@@ -92,7 +92,7 @@ def video2feats(feat_file, vids, num_pre_clips, dataset_name):
     return vid_feats
 
 def get_vid_feat(feat_file, vid, num_pre_clips, dataset_name):
-    assert exists(feat_file)
+    # assert exists(feat_file)
     
     if dataset_name == "activitynet":
         with h5py.File(os.path.join(feat_file, '%s.h5' % vid), 'r') as fr:
