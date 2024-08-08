@@ -1,6 +1,6 @@
 # Maskable Retentive Network for Video Moment Retrieval
 
-Source code for our ACM MM 2024 paper x
+Source code for our ACM MM 2024 paper 
 
 **Task Example:** The goal of both MR tasks NLMR (_natural language moment retrieval_) and SLMR (_spoken language moment retrieval_) is to predict the temporal boundaries $(\tau_{start}, \tau_{end})$ of target moment described by a given query $q$ (_text or audio modality_).
 
@@ -95,13 +95,15 @@ For training, run the python instruction below:
 python train_net.py --config-file configs/xxxx.yaml 
 ```
 
-## Testing
-Our trained model will be provided in [Google Drive](xx). Please download them to the `checkpoints/best/` folder.
-Use the following commands for testing:
+## Testing on TACoS
 
-```
-python test_net.py --config-file checkpoints/best/xxxx.yaml   --ckpt   checkpoints/best/xxxx.pth
-```
+ 1) download the model weight file from [Google Drive](https://drive.google.com/drive/folders/1yAkpu-hSL1nW9uPzKb4cH4dqMY985A4E?usp=sharing) to the `checkpoints/best/tacos` folder
+ 2) cd ret/modeling/ret_model, then copy the code in file "ret_model_tacos.py" to file "ret_model.py".
+ 3) python test_net.py --config-file checkpoints/best/tacos/config.yaml   --ckpt   checkpoints/best/tacos/pool_model_110e.pth
+
+## Testing on Charades
+
+Please wait for the update
 
 
 ## LICENSE
