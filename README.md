@@ -82,13 +82,13 @@ The architecture of the Maskable Retentive Network (MRNet). We conduct modality-
       ├── test_net.py
       └── ···
 
-
+----------
 ## Dependencies
 
     pip install yacs h5py terminaltables tqdm librosa transformers
     conda install pytorch==1.11.0 torchvision==0.12.0 torchaudio==0.11.0 cudatoolkit=11.3 -c pytorch
 
-
+----------
 ## Training
 
 ### ActivityNet
@@ -102,9 +102,9 @@ The architecture of the Maskable Retentive Network (MRNet). We conduct modality-
 
 ### Charades
 
- 1) `cd ret/modeling/ret_model`, then copy the code in file `ret_model_charades.py` to file `ret_model.py`.
- 3) `python train_net.py --config-file checkpoints/best/charades/config.yml`
+please wait for the update
 
+----------
 ## Testing 
 
 ### ActivityNet
@@ -123,7 +123,7 @@ The architecture of the Maskable Retentive Network (MRNet). We conduct modality-
 please wait for the update
 
 
-
+----------
 ## LICENSE
 The annotation files and many parts of the implementations are borrowed from [MMN](https://github.com/MCG-NJU/MMN).
 Our codes are under [MIT](https://opensource.org/licenses/MIT) license.
