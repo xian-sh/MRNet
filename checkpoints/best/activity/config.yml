@@ -1,0 +1,77 @@
+DATALOADER:
+  NUM_WORKERS: 16
+DATASETS:
+  NAME: activitynet
+  TEST:
+  - activitynet_test
+  TRAIN:
+  - activitynet_train
+INPUT:
+  NUM_PRE_CLIPS: 256
+MODEL:
+  ARCHITECTURE: RET
+  DEVICE: cuda
+  RET:
+    FEAT2D:
+      NAME: pool
+      POOLING_COUNTS:
+      - 15
+      - 8
+      - 8
+    FEATPOOL:
+      HIDDEN_SIZE: 512
+      INPUT_SIZE: 500
+      KERNEL_SIZE: 4
+    INPUT_TEXT_DIM: 768
+    JOINT_SPACE_SIZE: 256
+    LOSS:
+      BCE_WEIGHT: 1
+      CONTRASTIVE_WEIGHT: 0.1
+      MARGIN: 0.3
+      MAX_IOU: 1.0
+      MIN_IOU: 0.5
+      NEGATIVE_VIDEO_IOU: 0.5
+      NUM_POSTIVE_VIDEO_PROPOSAL: 1
+      PAIRWISE_SENT_WEIGHT: 0.0
+      SENT_REMOVAL_IOU: 0.5
+      TAU_SENT: 0.1
+      TAU_VIDEO: 0.1
+    NUM_CLIPS: 64
+    PREDICTOR:
+      HIDDEN_SIZE: 512
+      KERNEL_SIZE: 9
+      NUM_STACK_LAYERS: 4
+    TEXT_ENCODER:
+      NAME: BERT
+    VIDEO_MODE: c3d
+OUTPUT_DIR: ./result_activity
+PATHS_CATALOG: ./ret/config/paths_catalog.py
+SOLVER:
+  ATT_DROPOUT: null
+  ATT_MODE: all
+  ATT_SOFTMAX: true
+  BATCH_SIZE: 12
+  CHECKPOINT_PERIOD: 1
+  D_DOUBLE: true
+  FREEZE_BERT: 4
+  GAMMA: 0.98
+  LOSS_RATIO: 0.15
+  LR: 0.0008
+  MASK_MODE: both
+  MAX_EPOCH: 15
+  MILESTONES:
+  - 7
+  - 15
+  N_HEAD: 8
+  ONLY_IOU: 6
+  RESUME: false
+  RESUME_EPOCH: 7
+  SKIP_TEST: 1
+  SPARSE_WEIGHT: 10.0
+  TEST_PERIOD: 1
+  TRANS_LAYER: 2
+  USE_LRTNET: true
+TEST:
+  BATCH_SIZE: 12
+  CONTRASTIVE_SCORE_POW: 0.5
+  NMS_THRESH: 0.5
