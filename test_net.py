@@ -22,7 +22,7 @@ def main():
     parser.add_argument(
         "--ckpt",
         help="The path to the checkpoint for test, default is the latest checkpoint.",
-        default=None,
+        default="activity/pool_model_11e.pth",
     )
     parser.add_argument(
         "opts",
@@ -59,7 +59,7 @@ def main():
     output_dir = cfg.OUTPUT_DIR
     checkpointer = MmnCheckpointer(cfg, model, save_dir=output_dir)
 #     sta/result_1026/text_11111_new/pool_model_19e.pth
-    _ = checkpointer.load('activity/result_1102_loss_ratio/loss/0.15/pool_model_14e.pth', use_latest=args.ckpt is None)
+    _ = checkpointer.load(cfg.ckpt, use_latest=args.ckpt is None)
 
     dataset_names = cfg.DATASETS.TEST
     data_loaders_val = make_data_loader(cfg, is_train=False, is_distributed=distributed)[0]
