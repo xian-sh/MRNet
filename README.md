@@ -61,7 +61,7 @@ The architecture of the Maskable Retentive Network (MRNet). We conduct modality-
       ret/config/paths_catalog.py
 
 
-**3. Or prepare the files in the following structure (Optional).**
+**4. Or prepare the files in the following structure (Optional).**
    
       MRNet
       ├── configs
