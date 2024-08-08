@@ -48,7 +48,7 @@ The architecture of the Maskable Retentive Network (MRNet). We conduct modality-
 * **For convenience, the extracted input data features can be downloaded directly from [baiduyun, passcode:d4yl](https://pan.baidu.com/share/init?surl=FLzAPACOfcK_xDewZoXAkg&pwd=d4yl)**
 
 
-**2. Text and audio feature extraction.** 
+**2. Text and audio feature extraction (Optional).** 
 
 ```
  cd preprocess
@@ -56,7 +56,12 @@ The architecture of the Maskable Retentive Network (MRNet). We conduct modality-
  python audio_encode.py
 ```
 
-**3. Prepare the files in the following structure.**
+**3. Set your own dataset path in the following .py file.**
+
+      ret/config/paths_catalog.py
+
+
+**3. Or prepare the files in the following structure (Optional).**
    
       MRNet
       ├── configs
@@ -77,9 +82,6 @@ The architecture of the Maskable Retentive Network (MRNet). We conduct modality-
       ├── test_net.py
       └── ···
 
-**4. Or set your own dataset path in the following .py file.**
-
-      ret/config/paths_catalog.py
 
 ## Dependencies
 
@@ -95,13 +97,15 @@ For training, run the python instruction below:
 python train_net.py --config-file configs/xxxx.yaml 
 ```
 
-## Testing on TACoS
+## Testing 
+
+### TACoS
 
  1) download the model weight file from [Google Drive](https://drive.google.com/drive/folders/1yAkpu-hSL1nW9uPzKb4cH4dqMY985A4E?usp=sharing) to the `checkpoints/best/tacos` folder
  2) cd ret/modeling/ret_model, then copy the code in file "ret_model_tacos.py" to file "ret_model.py".
  3) python test_net.py --config-file checkpoints/best/tacos/config.yaml   --ckpt   checkpoints/best/tacos/pool_model_110e.pth
 
-## Testing on Charades
+### Charades
 
 Please wait for the update
 
