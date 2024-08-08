@@ -1,0 +1,75 @@
+DATALOADER:
+  NUM_WORKERS: 0
+DATASETS:
+  NAME: tacos
+  TEST:
+  - tacos_test
+  TRAIN:
+  - tacos_train
+INPUT:
+  NUM_PRE_CLIPS: 512
+MODEL:
+  ARCHITECTURE: RET
+  DEVICE: cuda
+  RET:
+    FEAT2D:
+      NAME: pool
+      POOLING_COUNTS:
+      - 15
+      - 8
+      - 8
+      - 8
+    FEATPOOL:
+      HIDDEN_SIZE: 512
+      INPUT_SIZE: 500
+      KERNEL_SIZE: 4
+    JOINT_SPACE_SIZE: 256
+    LOSS:
+      BCE_WEIGHT: 1
+      CONTRASTIVE_WEIGHT: 0.1
+      MARGIN: 0.1
+      MAX_IOU: 0.7
+      MIN_IOU: 0.3
+      NEGATIVE_VIDEO_IOU: 0.5
+      NUM_POSTIVE_VIDEO_PROPOSAL: 3
+      PAIRWISE_SENT_WEIGHT: 0.0
+      SENT_REMOVAL_IOU: 0.5
+      TAU_SENT: 0.1
+      TAU_VIDEO: 0.1
+    NUM_CLIPS: 128
+    PREDICTOR:
+      HIDDEN_SIZE: 512
+      KERNEL_SIZE: 5
+      NUM_STACK_LAYERS: 3
+    TEXT_ENCODER:
+      NAME: BERT
+    VIDEO_MODE: c3d
+OUTPUT_DIR: ./results_tacos/results_1022/full_both_0.999_+++++++
+PATHS_CATALOG: ./ret/config/paths_catalog.py
+SOLVER:
+  ATT_DROPOUT: 0.1
+  ATT_MODE: all
+  ATT_SOFTMAX: true
+  BATCH_SIZE: 2
+  CHECKPOINT_PERIOD: 10
+  D_DOUBLE: true
+  FREEZE_BERT: 400
+  GAMMA: 0.999
+  LR: 0.0015
+  MASK_MODE: both
+  MAX_EPOCH: 250
+  MILESTONES:
+  - 130
+  - 190
+  N_HEAD: 8
+  ONLY_IOU: 100
+  RESUME: true
+  RESUME_EPOCH: 61
+  SKIP_TEST: 0
+  SPARSE_WEIGHT: 20.0
+  TEST_PERIOD: 10
+  TRANS_LAYER: 1
+TEST:
+  BATCH_SIZE: 4
+  CONTRASTIVE_SCORE_POW: 0.3
+  NMS_THRESH: 0.4
