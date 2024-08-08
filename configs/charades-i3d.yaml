@@ -28,7 +28,8 @@ MODEL:
       TAU_SENT: 0.1
       MARGIN: 0.4
       CONTRASTIVE_WEIGHT: 0.05
-OUTPUT_DIR: './sta_new/decay/99'
+OUTPUT_DIR: ./result_sta 
+PATHS_CATALOG: ./ret/config/paths_catalog.py
 DATASETS:
   NAME: "charades"
   TRAIN: ("charades_train", )
@@ -38,28 +39,30 @@ INPUT:
 DATALOADER:
   NUM_WORKERS: 16
 SOLVER:
-  LR: 0.0001
+  ATT_DROPOUT: null
+  ATT_MODE: v
+  ATT_SOFTMAX: false
   BATCH_SIZE: 12
-  MILESTONES: (8, 13)
-  MAX_EPOCH: 25
-  TEST_PERIOD: 1
   CHECKPOINT_PERIOD: 1
-  RESUME: False
-  RESUME_EPOCH: 18
+  D_DOUBLE: true
   FREEZE_BERT: 60
-  ONLY_IOU: 7
-  SKIP_TEST: 1
-  USE_LRTNET: True
-  MASK_MODE: 'both'     # no  ret   sparse  both
-  SPARSE_WEIGHT: 10.0
-  ATT_MODE: 'v'     # all  v
-  D_DOUBLE: True
-  ATT_SOFTMAX: True
-  ATT_DROPOUT: None
-  TRANS_LAYER: 2
+  GAMMA: 0.98
+  LOSS_RATIO: 0.0
+  LR: 0.0001
+  MASK_MODE: both
+  MAX_EPOCH: 25
+  MILESTONES:
+  - 8
+  - 13
   N_HEAD: 8
-  GAMMA: 0.99
-  LOSS_RATIO: 0.00
+  ONLY_IOU: 7
+  RESUME: false
+  RESUME_EPOCH: 18
+  SKIP_TEST: 1
+  SPARSE_WEIGHT: 10.0
+  TEST_PERIOD: 1
+  TRANS_LAYER: 4
+  USE_LRTNET: true
 TEST:
   NMS_THRESH: 0.5
   BATCH_SIZE: 12
