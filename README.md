@@ -45,10 +45,10 @@ The architecture of the Maskable Retentive Network (MRNet). We conduct modality-
 
 * The Audio Captions: ActivityNet Speech Dataset: download the [original audio](https://drive.google.com/file/d/11f6sC94Swov_opNfpleTlVGyLJDFS5IW/view?usp=sharing) proposed by [VGCL](https://github.com/marmot-xy/Spoken-Video-Grounding)
 
-* **For convenience, the extracted input data features can be downloaded directly from [baiduyun, passcode:d4yl](https://pan.baidu.com/share/init?surl=FLzAPACOfcK_xDewZoXAkg&pwd=d4yl)**
+**2. For convenience, the extracted input data features can be downloaded directly from [baiduyun, passcode:d4yl](https://pan.baidu.com/share/init?surl=FLzAPACOfcK_xDewZoXAkg&pwd=d4yl)**
 
 
-**2. Text and audio feature extraction (Optional).** 
+**3. Text and audio feature extraction (Optional).** 
 
 ```
  cd preprocess
@@ -56,12 +56,12 @@ The architecture of the Maskable Retentive Network (MRNet). We conduct modality-
  python audio_encode.py
 ```
 
-**3. Set your own dataset path in the following .py file.**
+**4. Set your own dataset path in the following .py file.**
 
       ret/config/paths_catalog.py
 
 
-**4. Or prepare the files in the following structure (Optional).**
+**5. Or prepare the files in the following structure (Optional).**
    
       MRNet
       ├── configs
