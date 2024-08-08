@@ -114,7 +114,7 @@ python train_net.py --config-file configs/xxxx.yaml
 
  1) download the model weight file from [Google Drive](https://drive.google.com/drive/folders/1jUPXbhGTE5N9--W4iTi709956DrTkEPA?usp=sharing) to the `checkpoints/best/charades` folder
  2) `cd ret/modeling/ret_model`, then copy the code in file `ret_model_charades.py` to file `ret_model.py`.
- 3) `python test_net.py --config-file checkpoints/best/charades/config.yaml   --ckpt   checkpoints/best/charades/pool_model_110e.pth`
+ 3) `python test_net.py --config-file checkpoints/best/charades/config.yaml   --ckpt   checkpoints/best/charades/pool_model_11e.pth`
 
 
 ## LICENSE
