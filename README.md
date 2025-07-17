@@ -102,7 +102,7 @@ The architecture of the Maskable Retentive Network (MRNet). We conduct modality-
 
 ### Charades
 
-please wait for the update
+ 1) `python train_net.py --config-file --config-file checkpoints/best/charades/config.yml`
 
 ----------
 ## Testing 
@@ -120,8 +120,7 @@ please wait for the update
 
 ### Charades
 
-please wait for the update
-
+ The weights have been lost🤦‍♂️. For reproduction or evaluation, please train yourself
 
 ----------
 ## LICENSE
