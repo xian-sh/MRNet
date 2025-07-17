@@ -10,13 +10,11 @@ from sklearn.preprocessing import StandardScaler
 scaler = StandardScaler()
 
 
-# feat_file = "G:/Dataset/data/TACoS/tall_c3d_features.hdf5"
-# target_file = "G:/Dataset/data/TACoS/tall_c3d_features_pca.hdf5"
+feat_file = "G:/Dataset/data/TACoS/tall_c3d_features.hdf5"
+target_file = "G:/Dataset/data/TACoS/tall_c3d_features_pca.hdf5"
 
-feat_file = "G:/Dataset/data/Charades_STA/tacos_c3d_fc6_nonoverlap.hdf5"
-target_file = "G:/Dataset/data/Charades_STA/tacos_c3d_fc6_nonoverlap_pca.hdf5"
 
-# 创建PCA对象，并指定要降低到的目标维度
+# PCA
 n_components = 500
 pca = PCA(n_components=n_components)
 
