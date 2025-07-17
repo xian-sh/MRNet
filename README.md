@@ -45,7 +45,7 @@ The architecture of the Maskable Retentive Network (MRNet). We conduct modality-
 
 * The Audio Captions: ActivityNet Speech Dataset: download the [original audio](https://drive.google.com/file/d/11f6sC94Swov_opNfpleTlVGyLJDFS5IW/view?usp=sharing) proposed by [VGCL](https://github.com/marmot-xy/Spoken-Video-Grounding)
 
-**2. For convenience, the extracted input data features can be downloaded directly from [baiduyun, passcode:d4yl](https://pan.baidu.com/share/init?surl=FLzAPACOfcK_xDewZoXAkg&pwd=d4yl)**
+**2. For convenience, the extracted input data features can be downloaded directly from [baiduyun, passcode:5bwp](https://pan.baidu.com/s/1ktETHkIEliBEODfzCgl5vQ?pwd=5bwp)**
 
 
 **3. Text and audio feature extraction (Optional).** 
